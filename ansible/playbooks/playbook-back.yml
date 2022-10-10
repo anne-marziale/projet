@@ -1,0 +1,42 @@
+---
+- hosts: server2
+  become: true
+
+  tasks:
+    - name: Build image and with build args
+      community.docker.docker_image:
+        name: "api-projet-a"
+        build:
+          path: "/home/nini/Documents/student-list/simple_api"
+        source: build
+
+    - name: Create a network
+      community.docker.docker_network:
+        name: "projeta"
+
+    - name: Start a container with the backend and connect to network
+      docker_container:
+        name:  api-projet-a
+        recreate: "true"
+        image: "student-list:latest"
+        networks:
+          - name: "projeta"
+        ports:
+          - "5000:5000"
+        volumes:
+          - /home/nini/Documents/student-list/simple_api/student_age.json:/data/student_age.json
+      tags: 
+        - launch-backend
+
+
+    # - name: Add a container to a network, leaving existing containers connected
+    #   community.docker.docker_network:
+    #     name: "{{ networkname }}"
+    #     connected:
+    #       - container_a
+    #     appends: true
+
+
+
+
+
