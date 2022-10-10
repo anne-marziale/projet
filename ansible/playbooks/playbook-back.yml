@@ -7,7 +7,7 @@
       community.docker.docker_image:
         name: "api-projet-a"
         build:
-          path: "/home/nini/Documents/student-list/simple_api"
+          path: "home/nini/Documents/projet/student-list/simple_api"
         source: build
 
     - name: Create a network
@@ -24,7 +24,7 @@
         ports:
           - "5000:5000"
         volumes:
-          - /home/nini/Documents/student-list/simple_api/student_age.json:/data/student_age.json
+          - /home/nini/Documents/projet/student-list/simple_api/student_age.json:/data/student_age.json
       tags: 
         - launch-backend
 
