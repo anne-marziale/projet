@@ -1,0 +1,26 @@
+---
+# tasks file for backend
+- name: Build image and with build args
+  community.docker.docker_image:
+    name: "student-list"
+    build:
+      path: "/home/nini/Documents/projet/student-list/simple_api"
+    source: build
+
+- name: Create a network
+  community.docker.docker_network:
+    name: "projeta"
+
+- name: Start a container with the backend and connect to network
+  docker_container:
+    name:  api-projet-a
+    recreate: "true"
+    image: "student-list"
+    networks:
+      - name: "projeta"
+    ports:
+      - "5000:5000"
+    volumes:
+      - /home/nini/Documents/projet/student-list/simple_api/student_age.json:/data/student_age.json
+  tags: 
+    - launch-backend

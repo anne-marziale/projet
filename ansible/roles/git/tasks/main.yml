@@ -1,0 +1,22 @@
+---
+# tasks file for git
+- name: Install git
+  apt:
+    name: git
+    state: present
+    update_cache: yes
+
+- name: Just get information about the repository whether or not it has already been cloned locally
+  ansible.builtin.git:
+    repo: 'https://github.com/anne-marziale/projet.git'
+    dest: /home/nini/Documents/projet
+    clone: no
+    update: no
+  register: repo_exist
+
+- name: Clone the project to GitHub
+  ansible.builtin.git:
+    repo: "https://github.com/anne-marziale/projet.git"
+    dest:  /home/nini/Documents/projet
+  when : 
+    - repo_exist.changed == true
