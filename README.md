@@ -1,7 +1,7 @@
 # Projet A
 
 Automatiser le déploiement d'une application 2 tiers (**Frontend** + **backend**).
-Ici, application simple avec un serveur web PHP et une API Flask.
+Application simple avec un serveur web PHP et une API Flask.
 
 
 # Outils utilisés
