@@ -6,11 +6,11 @@ Ici c'est une Application simple avec un serveur web PHP et une API Flask.
 
 # Outils utilisés
 
- -   Ansible
- -   Git
- -   [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/docker.svg' alt='docker' height='40'>] Docker
- -   Vmware workstation (Ubuntu 22.04)
- -   Linux (Shell Bash)
+ -   <img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/ansible.svg' alt='ansible' height='40'> Ansible
+ -   <img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/git.svg' alt='git' height='40'> Git
+ -   <img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/docker.svg' alt='docker' height='40'> Docker
+ -   <img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/vmware.svg' alt='vmware' height='40'> Vmware workstation (Ubuntu 22.04)
+ -   <img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linux.svg' alt='linux' height='40'> Linux (Shell Bash)
 
 ## Objectif
 
