@@ -8,7 +8,7 @@ Ici c'est une Application simple avec un serveur web PHP et une API Flask.
 
  -   Ansible
  -   Git
- -   Docker
+ -   [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/docker.svg' alt='docker' height='40'>] Docker
  -   Vmware workstation (Ubuntu 22.04)
  -   Linux (Shell Bash)
 
