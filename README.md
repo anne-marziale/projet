@@ -20,6 +20,7 @@ Ici c'est une Application simple avec un serveur web PHP et une API Flask.
 ###
 
 Installation ansible 20.04 sur VMware (Ubuntu 22.04) avec "sudo apt install ansible".
+
 Lancement Playbook Ansible avec la commande "playbook-ansible playbooks\playbook.yml --ask-become-pass".
 
 
